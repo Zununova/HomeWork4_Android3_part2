@@ -2,17 +2,17 @@ package com.example.homework4_android3
 
 import android.app.Application
 import com.example.homework4_android3.data.RetrofitClient
-import com.example.homework4_android3.data.remote.CharacterApi
+import com.example.homework4_android3.data.remote.UserApiService
 
 class App : Application() {
 
     companion object {
-        var characterApi: CharacterApi? = null
+        var imageApiService: UserApiService? = null
     }
 
     override fun onCreate() {
         super.onCreate()
         val retrofitClient = RetrofitClient()
-        characterApi = retrofitClient.provideCharacterApiService()
+        imageApiService = retrofitClient.provideImageService()
     }
 }
